@@ -1,20 +1,116 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>HTML Basics DEMO</title>
+
+        <style>
+            body {
+                background-color: azure;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+             form {
+           width: 40%;
+           background-color:whitesmoke;
+           padding: 20px;
+           border-radius: 8px; /* Rounded corners for the form */
+                
+            }
+            
+            @media(max-width:400px) {
+                body{
+                    background-color:
+                    rgb(255, 204, 127);
+                }
+            }
+        </style>
+
+        <link rel="stylesheet" href="styles.css">
+
     </head>
 
     <body>
-        <h1>welcome to HTML!</h1>
-        <h6>welcome to HTML!</h6>
+        <div class = "header">
+             <h1 style ="color:blue;text-align:center">welcome to HTML!</h1>
+             <span id ="highlight">HTML!</span></h1>
+        </div>    
 
-        <p>This is a paragraph element.HTML uses tags to markup content.</p>
+        <p>This is a paragraph element.<b>HTML</b>uses tags to markup content.</p>
         <img src="data:image/jpeg;base64,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" alt="HTML Logo">
         <p>To learn more about <HTML>
-            <a href="https://www.w3schools.com/" target="_blank">
-                W3schools</a></p>
+            <a href="https://www.w3schools.com/"target="_blank">
+                <i>W3schools</i></a></p>
 
-                
-                
-            </a>
-        </HTML></p>
+        <p> In oder to go to second page<a href="next.html">click Here</a></p>
+
+        <p>The concepts that will be covered here are:</p>
+        <ol>
+           <li>HTML Lists</li>
+           <li>HTML Forms</li>
+           <li>HTML Tables</li>
+        </ol>  
+    <table>
+        <caption>Personal Information</caption>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>   
+            <tr>
+                <td>Tshering</td>
+                <td>Wangmo</td>
+                <td>28</td>
+            </tr> 
+            <tr>
+                <td>Pema</td>
+                <td>Dorji</td>
+                <td>32</td>
+            </tr> 
+            <tr>
+                <td>Leki </td>
+                <td>Wangmo</td>
+                <td>41</td>
+            </tr> 
+
+
+    <form>
+        <fieldset> 
+             <legend>User Personal Information</legend>  
+             <label for="name">Enter your full name:</label>
+             <input type="text" id="name" name="name" required />
+             <label for="email">Enter your email:</label>
+             <input type="email" id="email" name="email" required />
+             <label for="password">Enter your password:</label>
+             <input type="password" id="password" name="pass" required />
+             <label for="confirmPassword">Confirm your password:</label>
+             <input type="password" id="confirmPassword" name="confirmPass" required />
+             
+             <label>Enter your gender:</label>
+             <div class="gender-group">
+                <input type="radio" name="gender" value="male" id="male" required />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="others" id="others" />
+                <label for="others">Others</label>
+            </div>
+
+           <label for="dob">Enter your Date of Birth:</label>
+           <input type="date" id="dob" name="dob" required />
+           <label for = "designation">Occupation</label>
+           <select id = "designation" name = "Occupation">
+                <option value="Government">Government Service</option>
+                <option value="Private">Private Sectors</option>
+           </select>
+           <label for="address">Enter your Address:</label>
+           <textarea id="address" name="address" required></textarea>
+           <input type="submit" value="Submit" />
+       </fieldset>    
+        
+    
