@@ -5,6 +5,23 @@
         <title>HTML Basics DEMO</title>
 
         <style>
+            .header{
+                display: grid;
+                grid-template-columns: 1fr
+                1fr;
+                gap: 10px;
+                grid-template-areas:
+                    "item1 item2"
+            }
+
+            .item1 { grid-area: item;
+            background-color:lightblue;
+            text-align:center;}
+            .item2 { grid-area: item;
+            background-color:lightgreen;
+            text-align:center;}
+
+
             body {
                 background-color: azure;
             }
@@ -39,6 +56,15 @@
         <div class = "header">
              <h1 style ="color:blue;text-align:center">welcome to HTML!</h1>
              <span id ="highlight">HTML!</span></h1>
+             <div class="main">
+            <div class="item1"
+            style="grid-template-areas: item1">
+                 <h1>Item 1</h1>
+            </div>
+            <div class="item2"
+            style="grid-template-areas: item2">
+                 <h1>Item 2</h1>
+            </div>
         </div>    
 
         <p>This is a paragraph element.<b>HTML</b>uses tags to markup content.</p>
