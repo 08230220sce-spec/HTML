@@ -10,9 +10,3 @@ a {
     background-color:yellowgreen;
 }
 
-@media(max-width:400px) {
-    body{
-        background-color: 
-        lightcyan;
-    }
-}
